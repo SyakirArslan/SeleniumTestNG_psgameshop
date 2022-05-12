@@ -19,11 +19,11 @@ public class LoginTest extends BaseTest {
     @DataProvider(name = "credentials")
     public Object[][] getData(){
         return new Object[][] {
-                {"", "","FAILED null"},
-                {email, "", "FAILED Password Empty"},
-                {"email@yahoo.com", "iasais86sa", "FAILED Unknown Email" },
-                {email, "iasais86sa", "FAILED Pass Incorrect"},
-                {email, password, "PASSED"}
+                {"", "","Failed : null email and password"},
+                {email, "", "Failed : Password Empty"},
+                {"email@yahoo.com", "iasais86sa", "Failed : Unknown Email" },
+                {email, "iasais86sa", "Failed : Pass Incorrect"},
+                {email, password, "Passed : Login Success"}
         };
     }
 
@@ -41,9 +41,8 @@ public class LoginTest extends BaseTest {
         loginController = new LoginController(driver);
         loginController.fillEmail(email);
         loginController.fillPassword(password);
-        loginController.clickLogin();
-        loginController.verifError(expected);
-        homeController.toLoginPage();
+        loginController.clickLogin(expected);
+         homeController.toLoginPage();
 
     }
 }

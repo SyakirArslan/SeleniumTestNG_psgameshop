@@ -11,19 +11,26 @@ public class ProductTest extends BaseTest {
     private HomeController homeController;
     private ProductController productController;
 
+    String[] prodCode = {"105554","90505"};
+    String[] QntProduct = {"3","2"};
+    String[] prodName = {"PS5 Autobahn Police Simulator 3 (R2/English) 31 May 22",
+                        "PS5 HotWheels / Hot Wheels Unleashed (R3/English)"};
+    String[] prodPrice = {"359,000","428,000"};
+
     @DataProvider(name = "Data Product")
     public Object[][] getDataProduct(){
         return new Object[][] {
-                {"55346","3"},
-                {"101859","2"}
+                {prodCode[0],QntProduct[0]},
+                {prodCode[1],QntProduct[1]},
+
         };
     }
 
     @DataProvider(name = "Data Assert")
     public Object[][] getDataAssert(){
         return new Object[][] {
-                {"PS4 Dynasty Warriors 9 (R1/English)","375,000","3"},
-                {"PS4 LEGO Harry Potter Collection (R2/English)","278,000","2"}
+                {prodName[0],prodPrice[0],QntProduct[0]},
+                {prodName[1],prodPrice[1],QntProduct[1]}
         };
     }
 

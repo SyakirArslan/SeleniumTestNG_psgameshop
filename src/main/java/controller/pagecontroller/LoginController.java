@@ -27,30 +27,24 @@ public class LoginController extends BaseController {
         return this;
     }
 
-    public LoginController clickLogin(){
+    public LoginController clickLogin(String expected){
         click(loginPage.getLoginBtn());
-        return this;
-    }
-
-    public LoginController verifError(String expected){
-        if ("FAILED null".equals(expected)) {
+        if ("Failed : null email and password".equals(expected)) {
             softAssert.assertEquals(getText(loginPage.getNullError()),
                     "Error: Username is required.");
-        } else if ("FAILED Password Empty".equals(expected)) {
+        } else if ("Failed : Password Empty".equals(expected)) {
             softAssert.assertEquals(getText(loginPage.getPassEmpty()),
                     "Error: The password field is empty.");
-        } else if ("FAILED Unknown Email".equals(expected)) {
+        } else if ("Failed : Unknown Email".equals(expected)) {
             softAssert.assertEquals(getText(loginPage.getUnKnownEmail()),
                     "Unknown email address. Check again or try your username.");
-        } else if ("FAILED Pass Incorrect".equals(expected)) {
+        } else if ("Failed : Pass Incorrect".equals(expected)) {
             softAssert.assertEquals(getText(loginPage.getPasssIncorrect()),
                     ": The password you entered for the email address ");
-        } else if ("PASSED".equals(expected)) {
-            softAssert.assertFalse(
-                    true);
+        } else if ("Passed : Login Success".equals(expected)) {
+            softAssert.assertTrue(true);
         }
         return this;
     }
-
 
 }

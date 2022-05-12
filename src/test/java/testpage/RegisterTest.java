@@ -8,7 +8,6 @@ import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-import page.RegisterPage;
 import test.BaseTest;
 
 
@@ -26,11 +25,11 @@ public class RegisterTest extends BaseTest {
     @DataProvider(name = "Data Register")
     public Object[][] getData(){
         return new Object[][] {
-                {"","","","FAILED null"},
-                {email,"","","FAILED null Password"},
-               // {email, "test","test", null,"FAILED Week Pass"},
-                {email, password, confirmPass, "PASSED"},
-                {email, password, confirmPass, "FAILED Already Register"}
+                {"","","","Failed : null email and password"},
+                {email,"","","Failed : null Password"},
+                {email, "test","test","Failed : Week Pass"},
+                {email, password, confirmPass, "Passed : Registered"},
+                {email, password, confirmPass, "Failed : Already Register"}
         };
     }
 
@@ -53,8 +52,7 @@ public class RegisterTest extends BaseTest {
         registerController.fillEmail(email);
         registerController.fillPass(password);
         registerController.fillconfirmPass(confirmPass);
-        registerController.clickRegisBtn();
-        registerController.verifError(expected);
+        registerController.clickRegisBtn(expected);
         homeController.toRegisPage();
     }
 }

@@ -12,11 +12,11 @@ public class RegisterPage {
     protected By password = By.id("reg_password");
     protected By confirmPass = By.id("reg_confirm_password");
     protected By regisBtn = By.name("register");
-    protected By closeBtn = By.cssSelector(".mfp-close");
+    protected By closeBtn = By.xpath("//button[@title=\"Close (Esc)\"]");
 
     //Assert Text
     protected By notifText = By.cssSelector(".message-container");
-    protected By weekPass = By.cssSelector(".woocommerce-password-strength");
+    protected By weekPass = By.xpath("//div[contains(text(),'Very weak - Please enter a stronger password.')]");
 
 
     public By getFavGenre() {
