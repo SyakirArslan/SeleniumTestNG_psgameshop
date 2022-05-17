@@ -25,7 +25,6 @@ An in-depth paragraph about your project and overview of use.
 ```
 code blocks for commands
 ```
-
 ## Help
 
 Any advise for common problems or issues.
