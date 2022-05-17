@@ -1,4 +1,4 @@
-# Project Title
+# SeleniumTestNG
 
 Simple overview of use/purpose.
 
