@@ -25,10 +25,10 @@ An in-depth paragraph about your project and overview of use.
 * Go to testpage > ProductTest 
 ```bash
   String[] prodCode = {"88625","85197"};
-    String[] qntProduct = {"3","2"};
-    String[] prodName = {"PS5 Elden Ring (R3/English)",
+  String[] qntProduct = {"3","2"};
+  String[] prodName = {"PS5 Elden Ring (R3/English)",
                         "PS5 Hades (R3/English)"};
-    String[] prodPrice = {"689,000","289,000"};
+  String[] prodPrice = {"689,000","289,000"};
 ```
 
 ### Executing program
