@@ -4,10 +4,10 @@ import controller.pagecontroller.HomeController;
 import controller.pagecontroller.RegisterController;
 import jdk.jfr.Description;
 import org.testng.annotations.DataProvider;
-import org.testng.annotations.Optional;
-import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import test.BaseTest;
+import java.util.Random;
+
 
 
 public class RegisterTest extends BaseTest {
@@ -15,8 +15,10 @@ public class RegisterTest extends BaseTest {
     private HomeController homeController;
     private RegisterController registerController;
 
-    //Sebelum ditest harus ganti email dummy
-    String email = "test_auto23b8@yahoo.com";
+    Random random = new Random();
+    int number = random.nextInt(100) + 5;
+
+    String email = "test_regis" +number+ "@yahoo.com";
     String password = "PassW0r.d78";
     String confirmPass = "PassW0r.d78";
 
