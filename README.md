@@ -21,7 +21,15 @@ An in-depth paragraph about your project and overview of use.
 
 * How/where to download your program
 * Clone the repository.
-* Any modifications needed to be made to files/folders
+* Go to pom.xml to edit dependency
+* Go to testpage > ProductTest 
+```bash
+  String[] prodCode = {"88625","85197"};
+    String[] qntProduct = {"3","2"};
+    String[] prodName = {"PS5 Elden Ring (R3/English)",
+                        "PS5 Hades (R3/English)"};
+    String[] prodPrice = {"689,000","289,000"};
+```
 
 ### Executing program
 
