@@ -1,6 +1,8 @@
 # Selenium TestNG
 
-Simple overview of use/purpose.
+This Test Automation is created using Java + Selenium Web Driver + TestNG. Which can be used across different web based applications. 
+In this approach, the endeavor is to build a lot of applications independent reusable components so that they can directly used for 
+another web application without spending any extra effort.
 
 ## Description
 
