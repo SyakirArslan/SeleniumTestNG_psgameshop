@@ -31,7 +31,7 @@ An in-depth paragraph about your project and overview of use.
   String[] prodPrice = {"689,000","289,000"};
 ```
 * Change prodCOde
-![Change prodCode](https://prnt.sc/LTFbTvETCaWs)
+https://prnt.sc/LTFbTvETCaWs
 * 
 
 ### Executing program
