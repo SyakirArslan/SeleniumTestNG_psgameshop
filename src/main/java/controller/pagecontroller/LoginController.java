@@ -27,8 +27,12 @@ public class LoginController extends BaseController {
         return this;
     }
 
-    public LoginController clickLogin(String expected){
+    public LoginController loginBtn(){
         click(loginPage.getLoginBtn());
+        return this;
+    }
+
+    public LoginController loginAssertion(String expected){
         if ("Failed : null email and password".equals(expected)) {
             softAssert.assertEquals(getText(loginPage.getNullError()),
                     "Error: Username is required.");

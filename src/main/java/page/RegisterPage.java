@@ -18,7 +18,6 @@ public class RegisterPage {
     protected By notifText = By.cssSelector(".message-container");
     protected By weekPass = By.xpath("//div[contains(text(),'Very weak - Please enter a stronger password.')]");
 
-
     public By getFavGenre() {
         return favGenre;
     }

@@ -4,7 +4,6 @@ import controller.pagecontroller.HomeController;
 import controller.pagecontroller.LoginController;
 import jdk.jfr.Description;
 import org.testng.annotations.DataProvider;
-import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import test.BaseTest;
 
@@ -28,7 +27,6 @@ public class LoginTest extends BaseTest {
     }
 
     @Test(priority = 0)
-    @Parameters("environment")
     @Description("Navigate to Login Page")
     public void navToUserPage() {
         homeController = new HomeController(driver);
@@ -37,12 +35,12 @@ public class LoginTest extends BaseTest {
 
     @Test(priority = 1, dataProvider = "credentials", dependsOnMethods = {"navToUserPage"})
     @Description("Login an Account")
-    public void LoginAccount(String email, String password, String expected){
+    public void loginAccount(String email, String password, String expected){
         loginController = new LoginController(driver);
         loginController.fillEmail(email);
         loginController.fillPassword(password);
-        loginController.clickLogin(expected);
+        loginController.loginBtn();
+        loginController.loginAssertion(expected);
          homeController.toLoginPage();
-
     }
 }

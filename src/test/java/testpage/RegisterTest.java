@@ -1,11 +1,10 @@
 package testpage;
 
-import controller.BaseController;
 import controller.pagecontroller.HomeController;
 import controller.pagecontroller.RegisterController;
 import jdk.jfr.Description;
-import org.testng.Assert;
 import org.testng.annotations.DataProvider;
+import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import test.BaseTest;
@@ -16,9 +15,8 @@ public class RegisterTest extends BaseTest {
     private HomeController homeController;
     private RegisterController registerController;
 
-
     //Sebelum ditest harus ganti email dummy
-    String email = "test_auto298@yahoo.com";
+    String email = "test_auto23b8@yahoo.com";
     String password = "PassW0r.d78";
     String confirmPass = "PassW0r.d78";
 
@@ -34,14 +32,13 @@ public class RegisterTest extends BaseTest {
     }
 
     @Test(priority = 0)
-    @Parameters("environtment")
     @Description("Navigate to Register")
     public void navToUserPage() {
         homeController = new HomeController(driver);
         homeController.toRegisPage();
     }
 
-    @Test(priority = 1, dataProvider = "Data Register" ,dependsOnMethods = {"navToUserPage"})
+    @Test(priority = 1,dependsOnMethods = {"navToUserPage"}, dataProvider = "Data Register")
     @Description("Register an Account")
     public void regisAccount(String email, String password, String confirmPass, String expected){
         registerController = new RegisterController(driver);
@@ -52,7 +49,8 @@ public class RegisterTest extends BaseTest {
         registerController.fillEmail(email);
         registerController.fillPass(password);
         registerController.fillconfirmPass(confirmPass);
-        registerController.clickRegisBtn(expected);
+        registerController.registerBtn();
+        registerController.regisAssertion(expected);
         homeController.toRegisPage();
     }
 }

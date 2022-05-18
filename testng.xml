@@ -7,12 +7,15 @@
         </classes>
     </test>
     <test name="Login">
+        <parameter name="" value=""/>
         <classes>
             <class name="testpage.LoginTest"/>
         </classes>
     </test>
     <test name="Product">
         <classes>
+            <parameter name="email" value="silalet121@3dinews.com"/>
+            <parameter name="password" value="SyakirAlvar0"/>
             <class name="testpage.ProductTest"/>
         </classes>
     </test>
