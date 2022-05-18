@@ -25,6 +25,7 @@ An in-depth paragraph about your project and overview of use.
 ### Executing program
 
 * How to run the program
+* Clone the repository.
 * Step-by-step bullets
 ```
 code blocks for commands
