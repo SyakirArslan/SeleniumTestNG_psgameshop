@@ -12,8 +12,10 @@ An in-depth paragraph about your project and overview of use.
 
 ### Dependencies
 
-* Describe any prerequisites, libraries, OS version, etc., needed before installing program.
-* ex. Windows 10
+* Java jdk-17 or higher
+* Selenium Java 4.1.3 or higher
+* TestNG 7.4.0 or higher
+* Apache Maven 3 or higher
 
 ### Installing
 
