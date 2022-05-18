@@ -19,7 +19,6 @@ An in-depth paragraph about your project and overview of use.
 
 ### Installing
 
-* How/where to download your program
 * Clone the repository.
 * Go to pom.xml to edit dependency
 * Go to testpage > ProductTest 
@@ -39,14 +38,9 @@ https://prnt.sc/GuRUlvmuIZPH
 
 ### Executing program
 
-* How to run the program
-* Step-by-step bullets
-```
-code blocks for commands
-```
-## Help
+* Open RegisterTest and run
+* Open LoginTest and run
+* Open ProductTest and run
+* Open test.xml for test suite
 
-Any advise for common problems or issues.
-```
-command to run if program contains helper info
-```
+
