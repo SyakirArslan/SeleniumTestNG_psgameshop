@@ -30,6 +30,7 @@ An in-depth paragraph about your project and overview of use.
                         "PS5 Hades (R3/English)"};
   String[] prodPrice = {"689,000","289,000"};
 ```
+* Open [psegameshop.com](https://www.psegameshop.com/) and scroll down to "LIHAT SEMUA PRODUK"
 
 ### Executing program
 
