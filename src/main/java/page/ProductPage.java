@@ -30,11 +30,9 @@ public class ProductPage {
     public By getProductName(String productName) {
         return By.xpath("//a[contains(text(),'"+productName+"')]");
     }
-
     public By getPriceTag(String priceProduct) {
         return By.xpath("(//bdi[text()='"+priceProduct+"' and span='Rp'])[2]");
     }
-
     public By getQuantityPrduct(String productQuantity){
         return By.xpath("//input[@type='number' and @value='"+productQuantity+"']");
     }

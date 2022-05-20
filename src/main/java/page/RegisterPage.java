@@ -48,7 +48,6 @@ public class RegisterPage {
 
     public By getRegisBtn() {
         return regisBtn;
-        //aa
     }
 
     public By getCloseBtn() {
