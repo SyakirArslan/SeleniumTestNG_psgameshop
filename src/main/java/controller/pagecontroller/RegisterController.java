@@ -58,7 +58,7 @@ public class RegisterController extends BaseController {
     }
 
     public RegisterController regisAssertion(String expected){
-            click(registerPage.getRegisBtn());
+         //   click(registerPage.getRegisBtn());
         if ("Failed : null email and password".equals(expected)) {
             click(registerPage.getRegisBtn());
             softAssert.assertEquals(getText(registerPage.getNotifText()), "Error: Please provide a valid email address.");

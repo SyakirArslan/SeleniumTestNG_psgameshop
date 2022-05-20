@@ -8,8 +8,6 @@ import org.testng.annotations.Test;
 import test.BaseTest;
 import java.util.Random;
 
-
-
 public class RegisterTest extends BaseTest {
 
     private HomeController homeController;
